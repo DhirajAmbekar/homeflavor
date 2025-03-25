@@ -1,0 +1,193 @@
+.navbar_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  .navbar_section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px 10px 100px;
+    background-color: var(--black);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--white);
+    @include mobile {
+      padding: 10px 18px 10px 18px;
+      gap: 20px 0;
+      flex-direction: column;
+    }
+
+    .follow_up_nav {
+      @include mobile {
+        display: none;
+      }
+    }
+    > div {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      @include f16;
+      @include mobile {
+        width: 100%;
+        @include f18;
+      }
+      > div {
+        display: flex;
+        align-items: center;
+
+        svg {
+          cursor: pointer;
+          @include mobile {
+            width: 22px;
+            height: 22px;
+          }
+          path {
+            fill: var(--white);
+            transition: fill 0.2s;
+          }
+        }
+        &:hover {
+          svg {
+            path {
+              // fill: var(--);
+            }
+          }
+        }
+      }
+      a {
+        cursor: pointer;
+        color: var(--white);
+        text-decoration: none;
+        display: flex;
+        gap: 0 10px;
+        align-items: center;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .navbar_contacts {
+      @include mobile {
+        justify-content: space-between;
+      }
+    }
+    .navbar_social_icons {
+      > div {
+        background-color: rgba(255, 179, 0, 0.5);
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s linear;
+        &:hover {
+          background-color: rgba(255, 179, 0, 0.8);
+        }
+        svg {
+          height: 18px;
+          path {
+            fill: white;
+          }
+        }
+      }
+      @include mobile {
+        justify-content: center;
+      }
+    }
+  }
+  .navbar_section2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5c4033;
+    padding: 11px 100px 11px 100px;
+    .navbar_section2_mobile_menu {
+      display: none;
+      cursor: pointer;
+    }
+    @include mobile {
+      padding: 10px 18px 7px 18px;
+      img {
+        width: 120px;
+        height: 50px;
+      }
+      .navbar_section2_desktop_menu {
+        display: none;
+      }
+      .navbar_section2_mobile_menu {
+        display: block;
+      }
+    }
+
+    > div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      @include f18(500);
+
+      > div {
+        display: flex;
+        align-items: center;
+        svg {
+          cursor: pointer;
+        }
+      }
+      a {
+        color: #ffb400;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0 5px;
+        background-color: transparent;
+        transition: background-color 0.2s;
+        padding: 8px 16px;
+        border-radius: 20px;
+        &:hover {
+          background-color: #faf3e0;
+          color: var(--black);
+        }
+      }
+    }
+    .navbar_section2_btns {
+      gap: 20px;
+      font-weight: bold;
+      .navbar_section2_btns_login {
+        color: #e63946;
+        cursor: pointer;
+      }
+      .navbar_section2_btns_started {
+        color: #e63946;
+        border: 2px solid #e63946;
+        padding: 12px 24px;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: background-color .3s linear;
+        &:hover {
+          background-color: #e63946;
+          color: var(--white);
+        }
+      }
+    }
+  }
+  .navbar_section2_list {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sunset-pearl);
+    padding: 20px;
+    > a {
+      color: var(--black);
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0 10px;
+      padding: 20px;
+      @include f16;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "./common/common_collection";
+@import "./components/components_common";
+@import "./pages/page_common";
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  box-sizing: border-box;
+  user-select: none;
+  // font-family: "Figtree";
+  font-family: "Play", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.top_space {
+  margin: 141px 0 0 0;
+}

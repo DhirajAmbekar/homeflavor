@@ -1,0 +1,115 @@
+.section1_container {
+  overflow: hidden;
+  .inner_box_slider {
+    .slider_img {
+      height: calc(100dvh - 141px);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      @keyframes textanimation {
+        from {
+          transform: translateX(-1000%) perspective(500px) rotateY(90deg);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0) perspective(500px) rotateY(0deg);
+          opacity: 1;
+        }
+      }
+      @keyframes textanimation2 {
+        from {
+          transform: translateX(1000%) perspective(500px) rotateY(90deg);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0) perspective(500px) rotateY(0deg);
+          opacity: 1;
+        }
+      }
+      @keyframes btnanimation {
+        from {
+          transform: translateY(1000%) perspective(500px) rotateY(90deg);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0) perspective(500px) rotateY(0deg);
+          opacity: 1;
+        }
+      }
+
+      .slider_title {
+        @include f70(600);
+        color: #faf3e0;
+        width: 50%;
+        text-align: center;
+        animation: textanimation 0.5s ease-in-out;
+
+        // 3D Effect
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        transform: perspective(500px) translateZ(10px);
+      }
+
+      .slider_desc {
+        @include f20(600);
+        color: #ffb400;
+        width: 500px;
+        text-align: center;
+        margin: 10px 0 0 0px;
+        line-height: 1.8;
+        animation: textanimation2 0.5s ease-in-out;
+
+        // 3D Effect
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        transform: perspective(500px) translateZ(10px);
+      }
+      .slider_btns_collection {
+        display: flex;
+        align-items: center;
+        gap: 0 20px;
+        margin: 20px 0 0 0;
+        animation: btnanimation 0.5s ease-in-out;
+
+        // 3D Effect
+        > div {
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+        transform: perspective(500px) translateZ(10px);
+        .slider_btns1 {
+          @include f18(600);
+          background-color: #e63946;
+          padding: 20px 32px;
+          color: #faf3e0;
+          border-radius: 100px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          &:hover {
+            background-color: #d62f39;
+            color: #faf3e0;
+          }
+        }
+        .slider_btns2 {
+          @include f18(600);
+          border: 1px solid #faf3e0;
+          padding: 19px 31px;
+          color: #faf3e0;
+          border-radius: 100px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          backdrop-filter: blur(3px); // Blurring effect
+
+          &:hover {
+            border: 1px solid transparent;
+            background-color: #e63946;
+            color: #faf3e0;
+          }
+        }
+      }
+      @include mobile {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+}

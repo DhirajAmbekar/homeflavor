@@ -1,0 +1,12 @@
+// :root {
+$page_width_desktop: 1366;
+$page_width_mobile: 414;
+// $page_width: 100vw;
+// $page_height: 982;
+// }
+@function calc_horizontal($length) {
+  @return calc((($length / $page_width_desktop) * 100)) + 0vw;
+}
+@function calc_horizontal_mobile($length) {
+  @return calc((($length / $page_width_mobile) * 100)) + 0vw;
+}

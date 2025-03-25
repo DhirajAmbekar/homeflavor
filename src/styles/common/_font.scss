@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Play:wght@400;700&display=swap");
+
+$const_font_weight: 400;
+
+@mixin font_generator($font_size, $line_height, $weight) {
+  // font-size: calc_horizontal($font_size);
+  // line-height: calc_horizontal($line_height);
+  font-size: calc($font_size * 1px);
+  line-height: calc($line_height * 1%);
+  font-weight: $weight;
+
+  // @include mobile {
+  //   // font-size: calc_horizontal_mobile($font_size);
+  //   // line-height: calc_horizontal_mobile($line_height);
+  //   font-size: calc($font_size * 1px);
+  //   line-height: calc($line_height * 1px);
+  //   font-weight: $weight;
+  // }
+}
+
+@mixin f70($weight: $const_font_weight) {
+  @include font_generator(70, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f50($weight: $const_font_weight) {
+  @include font_generator(50, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f48($weight: $const_font_weight) {
+  @include font_generator(48, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f40($weight: $const_font_weight) {
+  @include font_generator(40, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f32($weight: $const_font_weight) {
+  @include font_generator(32, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f28($weight: $const_font_weight) {
+  @include font_generator(28, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f24($weight: $const_font_weight) {
+  @include font_generator(24, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f21($weight: $const_font_weight) {
+  @include font_generator(21, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f20($weight: $const_font_weight) {
+  @include font_generator(20, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f18($weight: $const_font_weight) {
+  @include font_generator(18, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f16($weight: $const_font_weight) {
+  @include font_generator(16, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f14($weight: $const_font_weight) {
+  @include font_generator(14, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
+@mixin f12($weight: $const_font_weight) {
+  @include font_generator(14, 100, $weight);
+  @include mobile {
+    @content;
+  }
+}
