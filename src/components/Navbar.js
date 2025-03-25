@@ -189,8 +189,8 @@ export const Navbar = () => {
                 y2="19"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0" stop-color="#fd6700"></stop>
-                <stop offset="1" stop-color="#85a389"></stop>
+                <stop offset="0" stop-color="#ffb400"></stop>
+                <stop offset="1" stop-color="#ffb400"></stop>
               </linearGradient>
               <path
                 fill="url(#a)"
