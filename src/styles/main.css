@@ -44,7 +44,7 @@
 @media screen and (max-width: 880px) {
   .navbar_container .navbar_section1 > div {
     width: 100%;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 100%;
     font-weight: 400;
   }

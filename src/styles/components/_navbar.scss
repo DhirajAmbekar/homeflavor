@@ -31,7 +31,7 @@
       @include f16;
       @include mobile {
         width: 100%;
-        @include f18;
+        @include f14;
       }
       > div {
         display: flex;
