@@ -9,6 +9,7 @@ import { Section6 } from "./pages/sections/Section6";
 import { Section7 } from "./pages/sections/Section7";
 import { Section8 } from "./pages/sections/Section8";
 import { Section9 } from "./pages/sections/Section9";
+import { Section10 } from "./pages/sections/Section10";
 
 export const App = () => {
   return (
@@ -23,6 +24,7 @@ export const App = () => {
         <Section6 />
         <Section7 />
         <Section8 />
+        <Section10 />
         <Section9 />
       </div>
     </>

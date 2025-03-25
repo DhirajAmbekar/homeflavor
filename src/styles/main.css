@@ -808,19 +808,22 @@
   transform: translateY(0);
 }
 
-.footer_container {
+.fo_container {
+  background-color: #faf3e0;
+}
+.fo_container .footer_container {
   background-color: #5c4033;
   border-radius: 500px 500px 0 0;
   padding: 100px 100px 20px 100px;
   overflow: hidden;
   position: relative;
 }
-.footer_container .burger {
+.fo_container .footer_container .burger {
   position: absolute;
   right: -400px;
   top: -40px;
 }
-.footer_container .footer_title {
+.fo_container .footer_container .footer_title {
   text-align: center;
   font-size: 50px;
   line-height: 100%;
@@ -829,71 +832,142 @@
   font-family: "Inknut Antiqua", serif;
   line-height: 2;
 }
-.footer_container .footer_img {
+.fo_container .footer_container .footer_img {
   text-align: center;
   margin: 40px 0;
 }
-.footer_container .footer_list {
+.fo_container .footer_container .footer_list {
   display: flex;
   gap: 0 100px;
   color: #faf3e0;
 }
-.footer_container .footer_list .footer_abou {
+.fo_container .footer_container .footer_list .footer_abou {
   font-size: 24px;
   line-height: 100%;
   font-weight: 500;
   margin: 0 0 20px 0;
 }
-.footer_container .footer_list .footer_abou_desc {
+.fo_container .footer_container .footer_list .footer_abou_desc {
   font-size: 16px;
   line-height: 100%;
   font-weight: 400;
 }
-.footer_container .footer_list .foot_links :first-child {
+.fo_container .footer_container .footer_list .foot_links :first-child {
   font-size: 24px;
   line-height: 100%;
   font-weight: 500;
   margin: 0 0 20px 0;
 }
-.footer_container .footer_list .foot_links > div {
+.fo_container .footer_container .footer_list .foot_links > div {
   margin: 0 0 20px 0;
   font-size: 16px;
   line-height: 100%;
   font-weight: 400;
 }
-.footer_container .footer_list .foot_address {
+.fo_container .footer_container .footer_list .foot_address {
   margin: 0 0 0 auto;
 }
-.footer_container .footer_list .foot_address .foot_address_title {
+.fo_container .footer_container .footer_list .foot_address .foot_address_title {
   font-size: 24px;
   line-height: 100%;
   font-weight: 500;
   margin: 0 0 20px 0;
 }
-.footer_container .footer_list .foot_address .foot_address_desc {
+.fo_container .footer_container .footer_list .foot_address .foot_address_desc {
   line-height: 1.2;
 }
-.footer_container .foot_break {
+.fo_container .footer_container .foot_break {
   height: 1px;
   width: 100%;
   background-color: #faf3e0;
   margin: 50px 0 20px 0;
 }
-.footer_container .foot_social {
+.fo_container .footer_container .foot_social {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #faf3e0;
 }
-.footer_container .foot_social > div {
+.fo_container .footer_container .foot_social > div {
   display: flex;
   gap: 0 40px;
 }
-.footer_container .foot_social > div svg {
+.fo_container .footer_container .foot_social > div svg {
   cursor: pointer;
 }
-.footer_container .foot_social > div svg path {
+.fo_container .footer_container .foot_social > div svg path {
   fill: #faf3e0;
+}
+
+.section10_container {
+  padding: 100px;
+  background-color: #faf3e0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.section10_container .section10_title {
+  font-size: 50px;
+  line-height: 100%;
+  font-weight: 500;
+  text-align: center;
+}
+.section10_container .section10_desc {
+  font-size: 21px;
+  line-height: 100%;
+  font-weight: 400;
+  color: #767a6a;
+  text-align: center;
+  width: 70%;
+  margin: 20px auto 50px auto;
+  line-height: 1.2;
+}
+@media screen and (max-width: 880px) {
+  .section10_container .section10_desc {
+    width: 100%;
+  }
+}
+.section10_container .accordian {
+  margin: 0 auto;
+}
+.section10_container .accordian .accordian_item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  background: white;
+}
+.section10_container .accordian .accordian_item.active {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.section10_container .accordian .accordian_item .accordian_button {
+  width: 100%;
+  background: #fff;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+.section10_container .accordian .accordian_item .accordian_button:hover {
+  background: #f1f1f1;
+}
+.section10_container .accordian .accordian_item .accordian_content {
+  padding: 15px;
+  background: #f9f9f9;
+  font-size: 16px;
+  color: #555;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 html {
