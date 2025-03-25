@@ -6,10 +6,17 @@
     padding: 100px 100px 20px 100px;
     overflow: hidden;
     position: relative;
+    @include mobile {
+      border-radius: 100px 100px 0 0;
+      padding: 50px 20px 20px 20px;
+    }
     .burger {
       position: absolute;
       right: -400px;
       top: -40px;
+      @include mobile {
+        display: none;
+      }
     }
     .footer_title {
       text-align: center;
@@ -17,6 +24,9 @@
       color: #faf3e0;
       font-family: "Inknut Antiqua", serif;
       line-height: 2;
+      @include mobile {
+        @include f21(500);
+      }
     }
     .footer_img {
       text-align: center;
@@ -28,9 +38,17 @@
       // justify-content: space-between;
 
       color: #faf3e0;
+      @include mobile {
+        gap: 40px;
+        flex-direction: column;
+        justify-content: center;
+      }
       .footer_abou {
         @include f24(500);
         margin: 0 0 20px 0;
+        @include mobile {
+          @include f18(500);
+        }
       }
       .footer_abou_desc {
         @include f16;
@@ -47,6 +65,9 @@
       }
       .foot_address {
         margin: 0 0 0 auto;
+        @include mobile {
+          margin: 0;
+        }
         .foot_address_title {
           @include f24(500);
           margin: 0 0 20px 0;
@@ -67,6 +88,11 @@
       justify-content: space-between;
       align-items: center;
       color: #faf3e0;
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
       // z-index: 10;
       > div {
         display: flex;

@@ -112,7 +112,7 @@
     @include mobile {
       padding: 10px 18px 7px 18px;
       img {
-        width: 120px;
+        width: 50px;
         height: 50px;
       }
       .navbar_section2_desktop_menu {
@@ -156,6 +156,9 @@
     .navbar_section2_btns {
       gap: 20px;
       font-weight: bold;
+      @include mobile {
+        display: none;
+      }
       .navbar_section2_btns_login {
         color: #e63946;
         cursor: pointer;
@@ -166,7 +169,7 @@
         padding: 12px 24px;
         border-radius: 100px;
         cursor: pointer;
-        transition: background-color .3s linear;
+        transition: background-color 0.3s linear;
         &:hover {
           background-color: #e63946;
           color: var(--white);
@@ -177,10 +180,10 @@
   .navbar_section2_list {
     display: flex;
     flex-direction: column;
-    background-color: var(--sunset-pearl);
+    background-color: #5c4033;
     padding: 20px;
     > a {
-      color: var(--black);
+      color: #faf3e0;
       text-decoration: none;
       display: flex;
       justify-content: center;

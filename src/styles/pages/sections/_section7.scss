@@ -4,6 +4,9 @@
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  @include mobile {
+    padding: 30px 20px;
+  }
   .section7_top {
     display: flex;
     justify-content: space-between;
@@ -12,6 +15,9 @@
     margin: 0 0 60px 0;
     .section7_title {
       @include f50(500);
+      @include mobile {
+        @include f21(500);
+      }
     }
     .section7_btn {
       background-color: #e63946;
@@ -20,16 +26,27 @@
       color: #faf3e0;
       @include f16;
       cursor: pointer;
+      @include mobile {
+        padding: 12px 22px;
+        @include f14;
+      }
     }
   }
   .section7_blogs {
     display: flex;
     gap: 0 20px;
+    @include mobile {
+      flex-direction: column;
+      gap: 20px;
+    }
     .section7_blog_left {
       background-color: white;
       width: 50%;
       border-radius: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+      @include mobile {
+        width: 100%;
+      }
       img {
         width: 100%;
       }
@@ -53,12 +70,19 @@
       flex-wrap: wrap;
       width: 50%;
       gap: 20px;
+      @include mobile {
+        width: 100%;
+        flex-direction: column;
+      }
       .sec7_blogs_box {
         background-color: white;
         width: calc(50% - 10px);
         border-radius: 20px;
-        
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+        @include mobile {
+          width: 100%;
+        }
         img {
           width: 100%;
         }
@@ -70,6 +94,9 @@
         .sec7_blogs_name {
           @include f18;
           padding: 0 0 0 20px;
+          @include mobile{
+            padding: 0 0 20px 20px;
+          }
         }
       }
     }

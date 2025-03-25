@@ -74,6 +74,25 @@ export const Section1 = () => {
                 <div className="slider_btns2">Explore Menu</div>
               </div>
             </div>
+            <div className="mobile_view_slider">
+              <img src={el?.img} alt="" />
+              <div
+                className="slider_title"
+                key={currentSlide} // This forces re-render
+              >
+                {el?.title}
+              </div>
+              <div className="slider_desc" key={`desc-${currentSlide}`}>
+                {el?.subtitle}
+              </div>
+              <div
+                className="slider_btns_collection"
+                key={`btn-${currentSlide}`}
+              >
+                <div className="slider_btns1">Order Now</div>
+                <div className="slider_btns2">Explore Menu</div>
+              </div>
+            </div>
           </div>
         ))}
       </Slider>

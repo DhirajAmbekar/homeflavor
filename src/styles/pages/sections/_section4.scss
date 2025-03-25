@@ -4,25 +4,27 @@
   display: flex;
   align-items: center;
   gap: 0 100px;
+  @include mobile {
+    flex-direction: column;
+    // align-items: center;
+    padding: 0 20px 50px 20px;
+    overflow: hidden;
+    gap: 60px;
+  }
   .section4_left {
     position: relative;
     .about2_img {
       position: absolute;
       right: -40px;
       bottom: -40px;
+      @include mobile {
+        right: 40px;
+      }
     }
     transform: translateX(-1000%) perspective(500px) rotateY(90deg);
     opacity: 0;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    //     @keyframes textanimation {
-    //       from {
-    //       }
-    //       to {
-    //         transform: translateX(0) perspective(500px) rotateY(0deg);
-    //         opacity: 1;
-    //     }
-    // }
-    // animation: textanimation 0.5s ease-in-out;
+
     &.do_animation {
       transform: translateX(0) perspective(500px) rotateY(0deg);
       opacity: 1;
@@ -32,31 +34,29 @@
     transform: translateX(1000%) perspective(500px) rotateY(90deg);
     opacity: 0;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    // @keyframes textanimation2 {
-    //   from {
-    //   }
-    //   to {
-    //     transform: translateX(0) perspective(500px) rotateY(0deg);
-    //     opacity: 1;
-    //   }
-    // }
 
-    // animation: textanimation2 0.5s ease-in-out;
-
-    // animation: textanimation2 0.5s ease-in-out;
     .section4_right_title {
       @include f50(500);
+      @include mobile {
+        @include f24(500);
+      }
     }
     .section4_right_desc1 {
       @include f20(500);
       padding: 30px 0;
       line-height: 1.5;
+      @include mobile {
+        @include f18(500);
+      }
     }
     .section4_right_desc2 {
       @include f20;
       padding: 0 0 30px 0;
       line-height: 1.5;
       color: #414536;
+      @include mobile {
+        @include f16(500);
+      }
     }
     .section4_right_btn {
       width: fit-content;
@@ -67,6 +67,10 @@
       border-radius: 100px;
       transition: background-color 0.3s ease;
       cursor: pointer;
+      @include mobile {
+        @include f14;
+        margin: 0 auto;
+      }
       &:hover {
         background-color: #e63946;
         color: white;

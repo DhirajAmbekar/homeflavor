@@ -8,6 +8,9 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      @include mobile {
+        display: none;
+      }
       @keyframes textanimation {
         from {
           transform: translateX(-1000%) perspective(500px) rotateY(90deg);
@@ -109,6 +112,78 @@
       @include mobile {
         width: 100%;
         height: 200px;
+      }
+    }
+    .mobile_view_slider {
+      display: none;
+      @include mobile {
+        display: block;
+        padding: 0 0 50px 0;
+      }
+      img {
+        width: 100%;
+      }
+      .slider_title {
+        text-align: center;
+        @include f21(600);
+        margin: 30px 0;
+        animation: textanimation 0.5s ease-in-out;
+        padding: 0 30px;
+        // 3D Effect
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        transform: perspective(500px) translateZ(10px);
+      }
+      .slider_desc {
+        text-align: center;
+        @include f16;
+        animation: textanimation2 0.5s ease-in-out;
+        padding: 0 30px;
+        // 3D Effect
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        transform: perspective(500px) translateZ(10px);
+      }
+      .slider_btns_collection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 20px;
+        margin: 20px 0 0 0;
+        animation: btnanimation 0.5s ease-in-out;
+
+        // 3D Effect
+        > div {
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+        transform: perspective(500px) translateZ(10px);
+        .slider_btns1 {
+          @include f14(600);
+          background-color: #e63946;
+          padding: 20px 32px;
+          color: #faf3e0;
+          border-radius: 100px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          &:hover {
+            background-color: #d62f39;
+            color: #faf3e0;
+          }
+        }
+        .slider_btns2 {
+          @include f14(600);
+          // border: 1px solid #faf3e0;
+          padding: 19px 31px;
+          color: #faf3e0;
+          border-radius: 100px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          backdrop-filter: blur(3px); // Blurring effect
+          background-color: #e63946;
+          // &:hover {
+          //   border: 1px solid transparent;
+          //   background-color: #e63946;
+          //   color: #faf3e0;
+          // }
+        }
       }
     }
   }

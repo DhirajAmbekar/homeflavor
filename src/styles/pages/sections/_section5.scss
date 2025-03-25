@@ -4,12 +4,21 @@
   display: flex;
   align-items: center;
   gap: 0 100px;
-
+  @include mobile {
+    padding: 50px 20px 50px 20px;
+    flex-direction: column-reverse;
+  }
   .section5_left {
     position: relative;
     transform: translateX(-1000%) perspective(500px) rotateY(90deg);
     opacity: 0;
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    @include mobile {
+      margin: 20px 0 0 0;
+      img {
+        width: 100%;
+      }
+    }
     &.do_animation {
       transform: translateX(0) perspective(500px) rotateY(0deg);
       opacity: 1;
@@ -22,11 +31,17 @@
     .section5_right_title {
       @include f50(500);
       margin: 20px 0;
+      @include mobile {
+        @include f24(500);
+      }
     }
     .section4_right_desc1 {
       @include f18;
       margin: 20px 0;
       line-height: 1.5;
+      @include mobile {
+        @include f16;
+      }
     }
     .section4_right_points {
       @include f20(500);
@@ -34,6 +49,9 @@
       align-items: center;
       gap: 20px;
       margin: 10px 0;
+      @include mobile {
+        @include f16(500);
+      }
       .section4_right_points_svg {
         background-color: #ffb400;
         padding: 8px;

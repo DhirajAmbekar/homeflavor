@@ -207,81 +207,9 @@ export const Navbar = () => {
       {menu_ctr && (
         <div className="navbar_section2_list">
           <a href="/">Home</a>
-          <a href="/">
-            Services
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              xlink="http://www.w3.org/1999/xlink"
-              width="21"
-              height="21"
-              x="0"
-              y="0"
-              viewBox="0 0 24 24"
-              space="preserve"
-              class="hovered-paths"
-            >
-              <g>
-                <path
-                  d="M12 2.25c-5.376 0-9.75 4.374-9.75 9.75s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S17.376 2.25 12 2.25zm4.53 9.28-3.646 3.646c-.243.244-.563.365-.884.365s-.641-.121-.884-.365L7.47 11.53a.75.75 0 1 1 1.061-1.061l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.061 1.061z"
-                  fill="#000000"
-                  opacity="1"
-                  data-original="#000000"
-                  class="hovered-path"
-                ></path>
-              </g>
-            </svg>
-          </a>
-          <a href="/">
-            Protfolio
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              xlink="http://www.w3.org/1999/xlink"
-              width="21"
-              height="21"
-              x="0"
-              y="0"
-              viewBox="0 0 24 24"
-              space="preserve"
-              class="hovered-paths"
-            >
-              <g>
-                <path
-                  d="M12 2.25c-5.376 0-9.75 4.374-9.75 9.75s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S17.376 2.25 12 2.25zm4.53 9.28-3.646 3.646c-.243.244-.563.365-.884.365s-.641-.121-.884-.365L7.47 11.53a.75.75 0 1 1 1.061-1.061l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.061 1.061z"
-                  fill="#000000"
-                  opacity="1"
-                  data-original="#000000"
-                  class="hovered-path"
-                ></path>
-              </g>
-            </svg>
-          </a>
-          <a href="/">
-            Blogs
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              xlink="http://www.w3.org/1999/xlink"
-              width="21"
-              height="21"
-              x="0"
-              y="0"
-              viewBox="0 0 24 24"
-              space="preserve"
-              class="hovered-paths"
-            >
-              <g>
-                <path
-                  d="M12 2.25c-5.376 0-9.75 4.374-9.75 9.75s4.374 9.75 9.75 9.75 9.75-4.374 9.75-9.75S17.376 2.25 12 2.25zm4.53 9.28-3.646 3.646c-.243.244-.563.365-.884.365s-.641-.121-.884-.365L7.47 11.53a.75.75 0 1 1 1.061-1.061l3.47 3.47 3.47-3.47a.75.75 0 1 1 1.061 1.061z"
-                  fill="#000000"
-                  opacity="1"
-                  data-original="#000000"
-                  class="hovered-path"
-                ></path>
-              </g>
-            </svg>
-          </a>
+          <a href="/">About</a>
+          <a href="/">Menu</a>
+          <a href="/">Page</a>
           <a href="/">Contact</a>
         </div>
       )}
