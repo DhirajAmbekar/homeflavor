@@ -45,7 +45,7 @@ export const Section3 = () => {
           setIsVisible(false);
         }
       } else {
-        setIsVisible(false);
+        // setIsVisible(false);
       }
     };
 

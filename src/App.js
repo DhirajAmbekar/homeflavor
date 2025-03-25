@@ -3,6 +3,12 @@ import { Navbar } from "./components/Navbar";
 import { Section1 } from "./pages/sections/Section1";
 import { Section2 } from "./pages/sections/Section2";
 import { Section3 } from "./pages/sections/Section3";
+import { Section4 } from "./pages/sections/Section4";
+import { Section5 } from "./pages/sections/Section5";
+import { Section6 } from "./pages/sections/Section6";
+import { Section7 } from "./pages/sections/Section7";
+import { Section8 } from "./pages/sections/Section8";
+import { Section9 } from "./pages/sections/Section9";
 
 export const App = () => {
   return (
@@ -10,8 +16,14 @@ export const App = () => {
       <Navbar />
       <div className="top_space">
         <Section1 />
+        <Section4 />
         <Section2 />
         <Section3 />
+        <Section5 />
+        <Section6 />
+        <Section7 />
+        <Section8 />
+        <Section9 />
       </div>
     </>
   );

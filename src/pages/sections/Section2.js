@@ -152,7 +152,7 @@ export const Section2 = () => {
           setIsVisible(false);
         }
       } else {
-        setIsVisible(false);
+        // setIsVisible(false);
       }
     };
 

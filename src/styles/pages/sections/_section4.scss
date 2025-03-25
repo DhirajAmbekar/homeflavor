@@ -1,0 +1,80 @@
+.section4_container {
+  background-color: #faf3e0;
+  padding: 100px 100px 120px 100px;
+  display: flex;
+  align-items: center;
+  gap: 0 100px;
+  .section4_left {
+    position: relative;
+    .about2_img {
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+    }
+    transform: translateX(-1000%) perspective(500px) rotateY(90deg);
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    //     @keyframes textanimation {
+    //       from {
+    //       }
+    //       to {
+    //         transform: translateX(0) perspective(500px) rotateY(0deg);
+    //         opacity: 1;
+    //     }
+    // }
+    // animation: textanimation 0.5s ease-in-out;
+    &.do_animation {
+      transform: translateX(0) perspective(500px) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+  .section4_right {
+    transform: translateX(1000%) perspective(500px) rotateY(90deg);
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    // @keyframes textanimation2 {
+    //   from {
+    //   }
+    //   to {
+    //     transform: translateX(0) perspective(500px) rotateY(0deg);
+    //     opacity: 1;
+    //   }
+    // }
+
+    // animation: textanimation2 0.5s ease-in-out;
+
+    // animation: textanimation2 0.5s ease-in-out;
+    .section4_right_title {
+      @include f50(500);
+    }
+    .section4_right_desc1 {
+      @include f20(500);
+      padding: 30px 0;
+      line-height: 1.5;
+    }
+    .section4_right_desc2 {
+      @include f20;
+      padding: 0 0 30px 0;
+      line-height: 1.5;
+      color: #414536;
+    }
+    .section4_right_btn {
+      width: fit-content;
+      border: 1px solid #e63946;
+      color: #e63946;
+      @include f16;
+      padding: 20px;
+      border-radius: 100px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: #e63946;
+        color: white;
+      }
+    }
+    &.do_animation2 {
+      transform: translateX(0) perspective(500px) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+}
