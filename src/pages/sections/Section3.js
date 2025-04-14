@@ -1,37 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import Menu1 from "../../assets/menu1.png";
-import Menu2 from "../../assets/menu2.png";
-import Menu3 from "../../assets/menu3.png";
-import Menu4 from "../../assets/menu4.png";
+
 import { h2fMenu, h2fMenuTypes } from "../../utils/menuData";
 import { isPlainObject } from "../../utils/isPlainObject";
 
-const section3_list = [
-  {
-    name: "Fried Eggs",
-    price: "$ 9.99",
-    desc: "Made with eggs, lettuce, salt, oil and other ingredients.",
-    img: Menu1,
-  },
-  {
-    name: "Hawaiian Pizza",
-    price: "$ 15.99",
-    desc: "Made with eggs, lettuce, salt, oil and other ingredients.",
-    img: Menu2,
-  },
-  {
-    name: "Martinez Cocktail",
-    price: "$ 7.25",
-    desc: "Made with eggs, lettuce, salt, oil and other ingredients.",
-    img: Menu3,
-  },
-  {
-    name: "Butterscotch Cake",
-    price: "$ 20.99",
-    desc: "Made with eggs, lettuce, salt, oil and other ingredients.",
-    img: Menu4,
-  },
-];
 
 export const Section3 = () => {
   const section3Ref = useRef(null);
