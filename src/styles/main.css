@@ -538,7 +538,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 15px;
+  gap: 15px;
 }
 .section3_container .section3_menu_list .section3_menu_list_item {
   border: 1px solid #dbdfd0;
@@ -561,7 +561,7 @@
 }
 @media screen and (max-width: 880px) {
   .section3_container .section3_menu_list {
-    display: none;
+    flex-wrap: wrap;
   }
 }
 .section3_container .section3_menu_list > div {
@@ -599,6 +599,11 @@
   border-radius: 20px;
   overflow: hidden;
   width: calc(33.3333333333% - 24px);
+}
+@media screen and (max-width: 880px) {
+  .section3_container .section3_list .section3_box {
+    width: 100%;
+  }
 }
 .section3_container .section3_list .section3_box .section3_box_img {
   background-color: rgba(251, 255, 0, 0.39);
