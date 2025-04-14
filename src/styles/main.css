@@ -540,6 +540,25 @@
   align-items: center;
   gap: 0 15px;
 }
+.section3_container .section3_menu_list .section3_menu_list_item {
+  border: 1px solid #dbdfd0;
+  transition: color 0.3s ease;
+  padding: 12px 50px;
+  cursor: pointer;
+  border-radius: 100px;
+  color: black;
+  transition: all 0.3s linear;
+  text-transform: capitalize;
+}
+.section3_container .section3_menu_list .section3_menu_list_item_active {
+  color: white;
+  background-color: #e63946;
+  text-transform: capitalize;
+}
+.section3_container .section3_menu_list .section3_menu_list_item:hover {
+  color: white;
+  background-color: #e63946;
+}
 @media screen and (max-width: 880px) {
   .section3_container .section3_menu_list {
     display: none;
@@ -563,8 +582,10 @@
 }
 .section3_container .section3_list {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0 24px;
+  flex-wrap: wrap;
+  gap: 24px;
   margin: 30px 0 0 0;
 }
 @media screen and (max-width: 880px) {
@@ -573,16 +594,20 @@
     gap: 24px;
   }
 }
-.section3_container .section3_list > div {
+.section3_container .section3_list .section3_box {
   border: 1px solid #dbdfd0;
   border-radius: 20px;
   overflow: hidden;
-  width: 100%;
+  width: calc(33.3333333333% - 24px);
 }
-.section3_container .section3_list > div img {
-  width: 100%;
+.section3_container .section3_list .section3_box .section3_box_img {
+  background-color: rgba(251, 255, 0, 0.39);
 }
-.section3_container .section3_list > div .section3_box_price {
+.section3_container .section3_list .section3_box img {
+  width: 100%;
+  height: 400px;
+}
+.section3_container .section3_list .section3_box .section3_box_price {
   margin: 30px 0 15px 0;
   text-align: center;
   color: #e63946;
@@ -590,7 +615,7 @@
   line-height: 100%;
   font-weight: 600;
 }
-.section3_container .section3_list > div .section3_box_name {
+.section3_container .section3_list .section3_box .section3_box_name {
   text-align: center;
   color: #2c2f24;
   font-size: 20px;
@@ -598,7 +623,7 @@
   font-weight: 600;
   margin: 15px 0;
 }
-.section3_container .section3_list > div .section3_box_desc {
+.section3_container .section3_list .section3_box .section3_box_desc {
   text-align: center;
   color: #2c2f24;
   font-size: 16px;

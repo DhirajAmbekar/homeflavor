@@ -3,6 +3,8 @@ import Menu1 from "../../assets/menu1.png";
 import Menu2 from "../../assets/menu2.png";
 import Menu3 from "../../assets/menu3.png";
 import Menu4 from "../../assets/menu4.png";
+import { h2fMenu, h2fMenuTypes } from "../../utils/menuData";
+import { isPlainObject } from "../../utils/isPlainObject";
 
 const section3_list = [
   {
@@ -54,6 +56,7 @@ export const Section3 = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const [menuActive, setMenuActive] = useState("All");
 
   return (
     <div
@@ -67,21 +70,55 @@ export const Section3 = () => {
         you need to change to create a truly happens.
       </div>
       <div className="section3_menu_list">
-        <div>All</div>
-        <div>Breakfast</div>
-        <div>Main Dishes</div>
-        <div>Drinks</div>
-        <div>Desserts</div>
-      </div>
-      <div className="section3_list">
-        {section3_list.map((el, i) => (
-          <div className="section3_box">
-            <img src={el.img} alt="section3_img" />
-            <div className="section3_box_price">{el.price}</div>
-            <div className="section3_box_name">{el.name}</div>
-            <div className="section3_box_desc">{el.desc}</div>
+        <div
+          className={
+            menuActive === "All" ? "section3_menu_list_item_active" : ""
+          }
+          onClick={() => {
+            setMenuActive("All");
+          }}
+        >
+          All
+        </div>
+        {h2fMenuTypes?.map((el, i) => (
+          <div
+            key={i}
+            className={
+              "section3_menu_list_item" + (menuActive === el ? "_active" : "")
+            }
+            onClick={() => {
+              setMenuActive(el);
+            }}
+          >
+            {el}
           </div>
         ))}
+      </div>
+      <div className="section3_list">
+        {h2fMenu
+          ?.filter((item) => menuActive === "All" || item?.type === menuActive)
+          .map((el, i) => (
+            <div className="section3_box" key={i}>
+              <div
+                style={{
+                  backgroundImage: `url(${el?.img})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  height: "400px",
+                  width: "100%",
+                }}
+                className="section3_box_img"
+              ></div>
+              <div className="section3_box_price">
+                {isPlainObject(el.price)
+                  ? ` Full: ₹${el.price.full} ${el?.sub_rate} / Half: ₹${el.price.half} ${el?.sub_rate}`
+                  : `₹${el?.price} ${el?.sub_rate}`}
+              </div>
+              <div className="section3_box_name">{el?.title}</div>
+              <div className="section3_box_desc">{el?.desc}</div>
+            </div>
+          ))}
       </div>
     </div>
   );

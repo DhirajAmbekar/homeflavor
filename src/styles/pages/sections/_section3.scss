@@ -31,8 +31,27 @@
     justify-content: center;
     align-items: center;
     gap: 0 15px;
-    @include mobile{
-      display: none ;
+    .section3_menu_list_item {
+      border: 1px solid #dbdfd0;
+      transition: color 0.3s ease;
+      padding: 12px 50px;
+      cursor: pointer;
+      border-radius: 100px;
+      color: black;
+      transition: all 0.3s linear;
+      text-transform: capitalize;
+      &_active {
+        color: white;
+        background-color: #e63946;
+        text-transform: capitalize;
+      }
+      &:hover {
+        color: white;
+        background-color: #e63946;
+      }
+    }
+    @include mobile {
+      display: none;
     }
     > div {
       @include f18(500);
@@ -51,22 +70,28 @@
   }
   .section3_list {
     display: flex;
-    // justify-content: center;
+    justify-content: center;
     align-items: center;
-    gap: 0 24px;
+
+    flex-wrap: wrap;
+    gap: 24px;
     margin: 30px 0 0 0;
     @include mobile {
       flex-direction: column;
       gap: 24px;
     }
     // padding: 0 100px;
-    > div {
+    .section3_box {
       border: 1px solid #dbdfd0;
       border-radius: 20px;
       overflow: hidden;
-      width: 100%;
+      width: calc((100% / 3) - 24px);
+      .section3_box_img {
+        background-color: rgba(251, 255, 0, 0.39);
+      }
       img {
         width: 100%;
+        height: 400px;
       }
       .section3_box_price {
         margin: 30px 0 15px 0;
